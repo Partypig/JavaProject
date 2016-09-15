@@ -1,17 +1,39 @@
-package H04;
+package H05;
 
 import java.applet.Applet;
 import java.awt.*;
 
 /**
- * Created by Gebruiker on 11-9-2016.
+ * Created by Gebruiker on 15-9-2016.
  */
 
+public class GewichtMetVariabelen extends Applet {
 
+    //Variabelen maken
+    int V;
+    int V2;
+    int V3;
+    int H,H2,H3;
+    int J;
+    int J2;
+    int J3;
 
-public class Gewicht extends Applet {
 
     public void init() {
+
+        //Variabelen een waarde geven
+        V = 40;
+        J = 100;
+        H = 80;
+
+        //rekensom voor gewicht
+        V2 = 400-(2*V);
+        V3 = 2*V;
+        H2 = 400-(2*H);
+        H3 = 2*H;
+        J2 = 400-(2*J);
+        J3 = 2*J;
+
     }
 
     public void paint(Graphics g) {
@@ -21,20 +43,17 @@ public class Gewicht extends Applet {
         //Valerie haar waardes
         g.setColor(Color.blue);
         g.drawString("Valarie",160,400);
-        g.drawRect(160,314,20,76);
-        g.fillRect(160,314,20,76);
+        g.fillRect(160,V2,20,V3-10);
 
         //Jeroen zijn waardes
         g.setColor(Color.black);
         g.drawString("Jeroen",220,400);
-        g.drawRect(220,201,20,190);
-        g.fillRect(220,201,20,190);
+        g.fillRect(220,J2,20,J3-10);
 
         //Hans zijn waardes
         g.setColor(Color.red);
         g.drawString("Hans",280,400);
-        g.drawRect(280,240,20,150);
-        g.fillRect(280,240,20,150);
+        g.fillRect(280,H2,20,H3-10);
 
         //waardes
         g.setColor(Color.black);

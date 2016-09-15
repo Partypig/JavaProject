@@ -37,36 +37,36 @@ public class PraktijkopdrachtMetVariabelen extends Applet{
             g.drawString("Lijn",160,16);
 
             //Rechthoek
-            g.drawRect(6,70,300,80);
+            g.drawRect(6,70,breedte,hoogte);
             g.drawString("Rechthoek",160,161);
 
             //Afgeronde rechthoek
-            g.drawRoundRect(6,200,300,80,30,30);
+            g.drawRoundRect(6,200,breedte,hoogte,30,30);
             g.drawString("Afgeronde Rechthoek",160,291);
 
             //Gevulde rechthoek met ovaal
             g.setColor(Color.magenta);
-            g.fillRect(375,70,300,80);
+            g.fillRect(375,70,breedte,hoogte);
             g.setColor(Color.black);
-            g.drawOval(375,70,300,80);
+            g.drawOval(375,70,breedte,hoogte);
             g.drawString("Gevulde rechthoek met ovaal",490,161);
 
             //Gevulde ovaal
-            g.drawOval(375,200,300,80);
+            g.drawOval(375,200,breedte,hoogte);
             g.setColor(Color.magenta);
-            g.fillOval(375,200,300,80);
+            g.fillOval(375,200,breedte,hoogte);
             g.setColor(Color.black);
             g.drawString("Gevulde ovaal",500,291);
 
             //Taartpunt met ovaal eromheen
-            g.drawOval(700,70,300,80);
+            g.drawOval(700,70,breedte,hoogte);
             g.setColor(Color.magenta);
-            g.fillArc(700,70,300,80,0,45);
+            g.fillArc(700,70,breedte,hoogte,0,45);
             g.setColor(Color.black);
             g.drawString("Taartpunt met ovaal eromheen",800,161);
 
             //Cirkel
-            g.drawOval(800,200,80,80);
+            g.drawOval(800,200,hoogte,hoogte);
             g.drawString("Cirkel",825,291);
         }
     }
