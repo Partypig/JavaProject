@@ -31,7 +31,7 @@ public class PraktijkOpdrachtH06 extends Applet {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        g.drawString("" + afkap, 50, 50);
+        g.drawString("" + uitkomst, 50, 50);
     }
 }
 
