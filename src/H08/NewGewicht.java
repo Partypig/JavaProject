@@ -19,6 +19,15 @@ public class NewGewicht extends Applet{
     int J2;
     int J3;
 
+    TextField vak1;
+    TextField vak2;
+    TextField vak3;
+
+    Label label1;
+    Label label2;
+    Label label3;
+    Button knop;
+
 
     public void init() {
 
@@ -34,6 +43,26 @@ public class NewGewicht extends Applet{
         H3 = 2*H;
         J2 = 400-(2*J);
         J3 = 2*J;
+
+        vak1 = new TextField("",20);
+        vak2 = new TextField("",20);
+        vak3 = new TextField("",20);
+
+        label1 = new Label("Valerie");
+        label2 = new Label("Jeroen");
+        label3 = new Label("Hans");
+
+        knop = new Button("bereken");
+        BerekenKnopListener bkl = new BerekenKnopListener();
+        knop.addActionListener(bkl);
+
+        add(label1);
+        add(vak1);
+        add(label2);
+        add(vak2);
+        add(label3);
+        add(vak3);
+        add(knop);
 
     }
 
@@ -65,7 +94,26 @@ public class NewGewicht extends Applet{
         g.drawString("80",125,240);
         g.drawString("100",125,200);
 
-
     }
+    class BerekenKnopListener implements ActionListener {
+
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            V= Integer.parseInt(vak1.getText());
+            J= Integer.parseInt(vak2.getText());
+            H= Integer.parseInt(vak3.getText());
+            V2 = 400-(2*V);
+            V3 = 2*V;
+            H2 = 400-(2*H);
+            H3 = 2*H;
+            J2 = 400-(2*J);
+            J3 = 2*J;
+
+            repaint();
+
+        }
+    }
+
 
 }
