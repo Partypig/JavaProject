@@ -13,10 +13,13 @@ public class SchoolAvond extends Applet{
     Button b2;
     Button b3;
     Button b4;
+
     int J;
     int M;
     int M2;
     int V;
+    int Totaal;
+
     TextField Jongens;
     TextField Meisjes;
     TextField Man;
@@ -54,12 +57,20 @@ public class SchoolAvond extends Applet{
         add(b4);
         add(Vrouw);
 
+        Totaal = 0;
+
     }
+
+    @Override
+    public void paint(Graphics g) {
+        g.drawString("Totaal: "+Totaal,50,50);
+    }
+
     class Button1 implements ActionListener{
         public void actionPerformed(ActionEvent e){
             J=J+1;
             Jongens.setText(""+J);
-
+            Totaal=Totaal + 1;
             repaint();
         }
     }
@@ -67,7 +78,7 @@ public class SchoolAvond extends Applet{
         public void actionPerformed(ActionEvent e){
             M=M+1;
             Meisjes.setText(""+M);
-
+            Totaal=Totaal + 1;
             repaint();
         }
     }
@@ -75,7 +86,7 @@ public class SchoolAvond extends Applet{
         public void actionPerformed(ActionEvent e){
             M2=M2+1;
             Man.setText(""+M2);
-
+            Totaal=Totaal + 1;
             repaint();
         }
     }
@@ -83,7 +94,7 @@ public class SchoolAvond extends Applet{
         public void actionPerformed(ActionEvent e){
             V=V+1;
             Vrouw.setText(""+V);
-
+            Totaal=Totaal + 1;
             repaint();
         }
     }
