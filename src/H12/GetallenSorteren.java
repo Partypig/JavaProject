@@ -15,28 +15,33 @@ public class GetallenSorteren extends Applet{
    int[] getallen;
    Button knop;
 
+    //^ alle dingetjes gemaakt
+
     @Override
     public void init() {
 
         tekstvelden = new TextField[5];
         getallen = new int[5];
+        knop = new Button("BOOP");
 
         for (int i = 0; i < tekstvelden.length; i++){
             tekstvelden[i] = new TextField("", 5);
             add(tekstvelden[i]);
         }
 
-        knop = new Button("OK");
+        // ^ = 5 tekstvelden in 3 zinnen
+
         add(knop);
         knop.addActionListener(new KnopListener());
     }
+
+    // ^ waardes geven aan de dingetjes
 
     class KnopListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            // dit zorgt ervoor dat wat ingevoerd wordt gesorteerdt wordt
 
             for (int i = 0; 1 < tekstvelden.length; i++) {
                 String invoer = tekstvelden[i].getText();
@@ -48,6 +53,7 @@ public class GetallenSorteren extends Applet{
             for (int i = 0; i < getallen.length; i++) {
                 tekstvelden[i].setText(String.valueOf(getallen[i]));
             }
+            // zorgt ervoor dat alle getallen gesorteerd worden
         }
     }
 }
